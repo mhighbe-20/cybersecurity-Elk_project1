@@ -3,6 +3,9 @@
 The files in this repository were used to configure the network depicted below.
 
 ![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+https://drive.google.com/drive/folders/1F53P_7rIiUim3M8bc-FXFfabI449UX4Y
+https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Diagrams/Redteam-topology-MH_Unit-13.drawio.png
+
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -31,12 +34,13 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name                 | Function       | IP Address | Operating System |
+|----------------------|----------------|------------|------------------|
+| Jump Box Provisiner  | Gateway        | 10.0.0.4   | Linux            |
+| web-1                | DVWA Container | 10.0.0.5   | Linux            |
+| web-2                | DVWA Container | 10.0.0.6   | Linux            |
+| wweb-3               | DVWA Container | 10.0.0.8   | Linux            |
+| elk1                 | config/monitor | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
