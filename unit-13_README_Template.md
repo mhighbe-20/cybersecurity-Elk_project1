@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 Network-diagram:
 ![alt text][diagram]
-[Redteam-topology-MH_Unit-13] https://user-images.githubusercontent.com/76537344/144767019-557e106e-88c3-4369-955c-e589d3c876c4.jpg “Redteam-topology-MH_Unit-13”
+[Redteam-topology-MH_Unit-13] https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Diagrams/Redteam-topology-MH_Unit-13.drawio.png “Redteam-topology-MH_Unit-13”
 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the (yaml) file may be used to install only certain pieces of it, such as Filebeat.
