@@ -4,8 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
 
-Network-diagram:
-![alt text][Redteam-topology-MH_Unit-13](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Diagrams/Redteam-topology-MH_Unit-13.drawio.png “Redteam-topology-MH_Unit-13”)
+Red-team Network-diagram:
 
 ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Diagrams/Redteam-topology-MH_Unit-13.drawio.png "Network Diagram")
 
