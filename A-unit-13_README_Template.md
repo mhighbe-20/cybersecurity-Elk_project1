@@ -8,7 +8,7 @@ Red-team Network-diagram:
 
 ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Diagrams/Redteam-topology-MH_Unit-13.drawio.png "Network Diagram")
 
-
+![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/red-team-inbound.png "in-bound-rules")
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the (yaml) file may be used to install only certain pieces of it, such as Ansible, DVWA servers, or Elk Stack with Filebeat and Metricbeat.
 
@@ -158,6 +158,9 @@ _TODO: Answer the following questions to fill in the blanks:_
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - ... - `/etc/ansible/hosts.cfg`
+
+![alt test](https://github.com/mhighbe-20/cybersecurity-Elk_project1/commit/5b806caee19cb4055e22a7bd516e295c8ee410ab "hosts_config")
+
 - ... - Update the `filebeat-config.yml` file to include the ELK server private IP in lines `1106` and `1806`.
 - _Which URL do you navigate to in order to check that the ELK server is running?_
 - ... - Elk-public-IP:5601/app/kibana
@@ -168,10 +171,10 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 -	Go to /etc/ansible/files and use the curl command to add the config file:
 curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
 
-Copy the filebeat-playbook.yml file to /etc/ansible/.
-Update the filebeat-config.yml file to include the ELK server private IP in lines 1106 and 1806.
+Copy the *filebeat-playbook.yml* file to /etc/ansible/.
+Update the *filebeat-config.yml* file to include the ELK server private IP in lines `1106` and `1806`.
 Once you have this file on your Ansible container, edit it as specified:
-The username is elastic and the password is changeme.
+The username is *elastic* and the password is *changeme*.
 
 Scroll to line ``#1106`` and replace the IP address with the IP address of your ELK machine.
 
