@@ -16,7 +16,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 - ... - [install-elk](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Ansible/install-elk.yml)
 - ... - [filebeat-playbook](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Ansible/filebeat-playbook.yml)
-- ... - [metricbeat](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Ansible/metricbeat-playbook.yml)
+- ... - [metricbeat-playbook](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Ansible/metricbeat-playbook.yml)
 
 This document contains the following details:
 - Description of the topology
@@ -107,6 +107,7 @@ The playbook implements the following tasks:
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play3.png "download and launch")
 
 - -	4. Enable service docker on boot.
+
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play4.png "enable on boot")
 
 
@@ -129,6 +130,7 @@ This ELK server is configured to monitor the following machines:
 We have installed the following Beats on these machines:
 - _TODO: Specify which Beats you successfully installed_
 - ... -Filebeat:
+
 ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/filebeat-playbook-deploy.png "filebeat deploy")
 
 - ... -Metricbeat
@@ -152,12 +154,12 @@ SSH into the control node and follow the steps below:
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
-- ... - Copy the filebeat-playbook.yml file to /etc/ansible/files
+- ... - Copy the <*name*>-playbook.yml file to /etc/ansible/files
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - ... - `/etc/ansible/hosts.cfg`
 - ... - Update the `filebeat-config.yml` file to include the ELK server private IP in lines `1106` and `1806`.
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- _Which URL do you navigate to in order to check that the ELK server is running?_
 - ... - Elk-public-IP:5601/app/kibana
 
 
