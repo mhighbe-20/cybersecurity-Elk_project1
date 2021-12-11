@@ -176,9 +176,12 @@ Update the *filebeat-config.yml* file to include the ELK server private IP in li
 Once you have this file on your Ansible container, edit it as specified:
 The username is *elastic* and the password is *changeme*.
 
-![alt text]
+![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elastic_line-1806.png?raw=true "elastic_line-1806")
 
 Scroll to line ``#1106`` and replace the IP address with the IP address of your ELK machine.
+
+![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elasitc-1106.png?raw=true "line 1106")
+
 
 Run the filebeat-playbook.yml playbook, and navigate to the kibana page at [ELK public IP]/app/kibana to check that the installation worked as expected.
 
