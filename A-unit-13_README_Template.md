@@ -94,7 +94,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- - 	1. Check if docker.io is present, if not install it. (also install pip and python3)
+- - 1. Check if docker.io is present, if not install it. (also install pip and python3)
 
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play1.png "docker.io check")
 
