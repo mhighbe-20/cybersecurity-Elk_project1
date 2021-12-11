@@ -97,6 +97,7 @@ The playbook implements the following tasks:
 - ...- 	1. Check if docker.io is present, if not install it. (also install pip and python3)
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play1.png "docker.io check")
 
+
 - ...- 2. Set the Memory.
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play2.png "set memory")
 
