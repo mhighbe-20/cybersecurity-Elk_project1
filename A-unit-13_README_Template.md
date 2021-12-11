@@ -159,7 +159,7 @@ _TODO: Answer the following questions to fill in the blanks:_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - ... - `/etc/ansible/hosts.cfg`
 
-![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/commit/5b806caee19cb4055e22a7bd516e295c8ee410ab "hosts_config")
+![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/Ansible_hosts_stanzas.png?raw=true "hosts_config")
 
 - ... - Update the `filebeat-config.yml` file to include the ELK server private IP in lines `1106` and `1806`.
 - _Which URL do you navigate to in order to check that the ELK server is running?_
