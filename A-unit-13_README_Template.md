@@ -174,14 +174,15 @@ curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/r
 Copy the *filebeat-playbook.yml* file to /etc/ansible/.
 Update the *filebeat-config.yml* file to include the ELK server private IP in lines `1106` and `1806`.
 Once you have this file on your Ansible container, edit it as specified:
-The username is *elastic* and the password is *changeme*.
 
+The username is *elastic* and the password is *changeme*.
  - username:
+
 ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elastic_line-1806.png?raw=true "elastic_line-1806")
 
 Scroll to line ``#1106`` and replace the IP address with the IP address of your ELK machine.
-
 kibana IP:
+
 ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elastic_line-1106.png?raw=true "line 1106")
 
 
