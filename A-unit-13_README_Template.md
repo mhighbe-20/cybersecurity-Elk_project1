@@ -95,16 +95,16 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - ...- 	1. Check if docker.io is present, if not install it. (also install pip and python3)
-        ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play1.png "docker.io check")
+   ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play1.png "docker.io check")
 
 - ...- 2. Set the Memory.
-	     ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play2.png "set memory")
+   ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play2.png "set memory")
 
 - ... - 3. Download and launch the elk container and define the published ports..
-		    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play3.png "download and launch")
+   ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play3.png "download and launch")
 
 - ... -	4. Enable service docker on boot.
-        ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play4.png "enable on boot")
+   ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play4.png "enable on boot")
 - ...
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
@@ -152,6 +152,7 @@ _TODO: Answer the following questions to fill in the blanks:_
 - ... - Copy the filebeat-playbook.yml file to /etc/ansible/files
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+- ... - `/etc/ansible/hosts.cfg`
 - ... - Update the `filebeat-config.yml` file to include the ELK server private IP in lines `1106` and `1806`.
 - _Which URL do you navigate to in order to check that the ELK server is running?
 - ... - Elk-public-IP:5601/app/kibana
