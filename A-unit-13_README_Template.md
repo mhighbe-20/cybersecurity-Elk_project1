@@ -176,18 +176,20 @@ Update the *filebeat-config.yml* file to include the ELK server private IP in li
 Once you have this file on your Ansible container, edit it as specified:
 The username is *elastic* and the password is *changeme*.
 
+![alt text]
+
 Scroll to line ``#1106`` and replace the IP address with the IP address of your ELK machine.
 
 Run the filebeat-playbook.yml playbook, and navigate to the kibana page at [ELK public IP]/app/kibana to check that the installation worked as expected.
 
 -	Navigate to your ELK server's IP.
--	Filebeat
+- . -	Filebeat
 1.	Click Add Log Data.
 2.	Choose System Logs.
 3.	Click on the DEB tab under Getting Started.
 4.	Step 5: Module Status and click Check Data.
 
--	metricbeat
+- . -	metricbeat
 1.	Click Add Metric Data.
 2.	Click Docker Metrics.
 3.	Click the DEB tab under Getting Started for the correct Linux instructions.
