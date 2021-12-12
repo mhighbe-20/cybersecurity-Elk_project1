@@ -13,7 +13,9 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - _The playbook files:_ DVWA, Elk, Filebeat, metricbeat.
 
   [install-elk](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Ansible/install-elk.yml)
+
   [filebeat-playbook](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Ansible/filebeat-playbook.yml)
+
   [metricbeat](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Ansible/metricbeat-playbook.yml)
 
 This document contains the following details:
@@ -31,19 +33,18 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly redundant/available, in addition to restricting access and or distributing traffic to the network.
 - _What aspect of security do load balancers protect? What is the advantage of a jump box?_
-- Load Balance distributes traffic and protects against DDOS attacks.
-- Jump box and load balancers limit access to assets.
-- Distributes client requests or network load efficiently across multiple servers.
-- Ensures high availability and reliability by sending requests only to servers that are online.
-- Provides the flexibility to add or subtract servers as demand dictates.
-
+ - Load Balance distributes traffic and protects against DDOS attacks.
+ - Jump box and load balancers limit access to assets.
+ - Distributes client requests or network load efficiently across multiple servers.
+ - Ensures high availability and reliability by sending requests only to servers that are online.
+ - Provides the flexibility to add or subtract servers as demand dictates.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system Metrics.
 - _What does Filebeat watch for?_
-    Filebeat is a log data shipper for local files. Installed as an agent on your servers, Filebeat monitors the log directories or specific log files, tails the files, and forwards them either to Elasticsearch or Logstash for indexing. An example of such are the logs produced from the MySQL database supporting our application.
+  - Filebeat is a log data shipper for local files. Installed as an agent on your servers, Filebeat monitors the log directories or specific log files, tails the files, and forwards them either to Elasticsearch or Logstash for indexing. An example of such are the logs produced from the MySQL database supporting our application.
 
 - _What does Metricbeat record?_
-    Metricbeat collects metrics and statistics on the system. An example of such is cpu usage, which can be used to monitor the system health.
+  - Metricbeat collects metrics and statistics on the system. An example of such is cpu usage, which can be used to monitor the system health.
 
 _The configuration details of each machine may be found below._
 
@@ -62,10 +63,12 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _Whitelisted IP addresses_
+
   My `home public IP` to 23.99.178.156 restricted inbound rule on port 22.
   Machines within the network can only be accessed by ssh from the Ansible container on the jumpbox.
 
 - _Machines allowed to access the ELK VM and its IP address._
+
   Jump server via peering connection using SSH. 10.0.0.4 to 10.1.0.4.
 
 A summary of the access policies in place can be found in the table below.
