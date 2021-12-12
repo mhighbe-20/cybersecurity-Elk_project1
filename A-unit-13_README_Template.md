@@ -140,7 +140,7 @@ _Configure the Jumpbox to run Docker with an Ansible control node._
 - Start by installing `docker.io` on your Jump box.
  - Run `sudo apt update` then `sudo apt install docker.io`
  - Verify that the Docker service is running.
- - Run sudo systemctl status docker
+ - Run sudo systemctl status docker.
 _Note: If the Docker service is not running, start it with sudo systemctl start docker._
 - .- Once Docker is installed, pull the container cyberxsecurity/ansible.
 - .- Run sudo docker pull cyberxsecurity/ansible.
