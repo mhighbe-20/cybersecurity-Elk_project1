@@ -85,9 +85,9 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - _What are the main advantages of automating configuration with Ansible?_
-- ... - Ansible allows quick and easy deployment of multitier applications via playbooks.
-- ... - No custom code is necessary to automate the systems.
-- ... - Ansible will also deploy and bring up the asset in the desired run state.
+  - Ansible allows quick and easy deployment of multitier applications via playbooks.
+  - No custom code is necessary to automate the systems.
+  - Ansible will also deploy and bring up the asset in the desired run state.
 
 The playbook implements the following tasks:
 - _The main steps of the ELK installation playbook, e.g., install Docker; download image; etc._
@@ -138,9 +138,9 @@ _We have installed the following Beats on these machines:_
 ![alt test](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/metricbeat-playbook-deploy.png "merticbeat deploy")
 
 _These Beats allow us to collect the following information from each machine:_
-- ... - Filebeat is a log data shipper for local files. Installed as an agent on your servers, Filebeat monitors the log directories or specific log files, tails the files, and forwards them either to Elasticsearch or Logstash for indexing. An example of such are the logs produced from the MySQL database supporting our application.
+ - Filebeat is a log data shipper for local files. Installed as an agent on your servers, Filebeat monitors the log directories or specific log files, tails the files, and forwards them either to Elasticsearch or Logstash for indexing. An example of such are the logs produced from the MySQL database supporting our application.
 
-- ... - Metricbeat collects metrics and statistics on the system. An example of such is cpu usage, memory and network statistics, which can be used to monitor the system health.
+ - Metricbeat collects metrics and statistics on the system. An example of such is cpu usage, memory and network statistics, which can be used to monitor the system health.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured.
