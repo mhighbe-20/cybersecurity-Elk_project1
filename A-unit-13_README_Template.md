@@ -179,9 +179,11 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 -	Go to /etc/ansible/files and use the curl command to add the config file:
 curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
 
- Copy the filebeat-playbook.yml file to /etc/ansible/.
- Update the filebeat-config.yml file to include the ELK server private IP in lines 1106 and 1806.
- Once you have this file on your Ansible container, edit it as specified:
+Copy the filebeat-playbook.yml file to /etc/ansible/.
+
+Update the filebeat-config.yml file to include the ELK server private IP in lines 1106 and 1806.
+
+Once you have this file on your Ansible container, edit it as specified:
 
 The username is *elastic* and the password is *changeme*.
  - username:
