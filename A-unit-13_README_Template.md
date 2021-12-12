@@ -92,20 +92,24 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 The playbook implements the following tasks:
 - _The main steps of the ELK installation playbook, e.g., install Docker; download image; etc._
 - ...- 	1. Check if docker.io is present, if not install it. (also install pip and python3)
+
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play1.png "docker.io check")
 
 
 - ...- 2. Set the Memory.
+
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play2.png "set memory")
 
 
 
-- ... - 3. Download and launch the elk container and define the published ports..
+- ... - 3. Download and launch the elk container and define the published ports.
+
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play3.png "download and launch")
 
 
 
 - ... -	4. Enable service docker on boot.
+
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play4.png "enable on boot")
 
 
