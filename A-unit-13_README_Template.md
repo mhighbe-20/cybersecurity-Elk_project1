@@ -33,11 +33,11 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly redundant/available, in addition to restricting access and or distributing traffic to the network.
 - _What aspect of security do load balancers protect? What is the advantage of a jump box?_
- - Load Balance distributes traffic and protects against DDOS attacks.
- - Jump box and load balancers limit access to assets.
- - Distributes client requests or network load efficiently across multiple servers.
- - Ensures high availability and reliability by sending requests only to servers that are online.
- - Provides the flexibility to add or subtract servers as demand dictates.
+  - Load Balance distributes traffic and protects against DDOS attacks.
+  - Jump box and load balancers limit access to assets.
+  - Distributes client requests or network load efficiently across multiple servers.
+  - Ensures high availability and reliability by sending requests only to servers that are online.
+  - Provides the flexibility to add or subtract servers as demand dictates.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system Metrics.
 - _What does Filebeat watch for?_
@@ -63,14 +63,11 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _Whitelisted IP addresses_
-
-  My `home public IP` to 23.99.178.156 restricted inbound rule on port 22.
-  Machines within the network can only be accessed by ssh from the Ansible container on the jumpbox.
+  - My `home public IP` to 23.99.178.156 restricted inbound rule on port 22.
+  - Machines within the network can only be accessed by ssh from the Ansible container on the jumpbox.
 
 - _Machines allowed to access the ELK VM and its IP address._
-
   Jump server via peering connection using SSH. 10.0.0.4 to 10.1.0.4.
-
 A summary of the access policies in place can be found in the table below.
 
 |  Name              	|  Publicly Accessible 	|  IP Address    	|  Description             	|
@@ -97,15 +94,21 @@ The playbook implements the following tasks:
 - ...- 	1. Check if docker.io is present, if not install it. (also install pip and python3)
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play1.png "docker.io check")
 
+
 - ...- 2. Set the Memory.
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play2.png "set memory")
+
+
 
 - ... - 3. Download and launch the elk container and define the published ports..
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play3.png "download and launch")
 
+
+
 - ... -	4. Enable service docker on boot.
    ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/elk-play4.png "enable on boot")
-- ...
+
+
 
 _The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance._
 
@@ -143,33 +146,32 @@ _Configure the Jumpbox to run Docker with an Ansible control node._
 - Start by installing `docker.io` on your Jump box.
  - Run `sudo apt update` then `sudo apt install docker.io`
  - Verify that the Docker service is running.
- - Run sudo systemctl status docker.
-_Note: If the Docker service is not running, start it with sudo systemctl start docker._
-- .- Once Docker is installed, pull the container cyberxsecurity/ansible.
-- .- Run sudo docker pull cyberxsecurity/ansible.
-- . - You can also switch to the root user so you don't have to keep typing sudo.
-- . - Run sudo su.
-- . - Launch the Ansible container and connect to it using the appropriate Docker commands.
-- . - Run docker run -ti cyberxsecurity/ansible:latest bash to start the container.
+ - Run sudo systemctl status docker. (_Note: If the Docker service is not running, start it with `sudo systemctl start docker`._)
+ - Once Docker is installed, pull the container cyberxsecurity/ansible.
+ - Run sudo docker pull cyberxsecurity/ansible.
+ - You can also switch to the root user so you don't have to keep typing sudo.
+ - Run sudo su.
+ - Launch the Ansible container and connect to it using the appropriate Docker commands.
+ - Run docker run -ti cyberxsecurity/ansible:latest bash to start the container.
 
-Assuming you have such a control node provisioned:
+_Assuming you have such a control node provisioned:_
 
 SSH into the control node and follow the steps below:
-- Copy the `yaml` file to `ansible folder`.
-- Update the `config file` to include `remote users and ports within the appropriate stanza`.
-- Run the playbook, and navigate to the public IP of the ELK server on the specified port to the kibana app. [http://20.119.57.87/app/kibana](http://20.119.57.87/app/kibana) to check that the installation worked as expected.
+ - Copy the `yaml` file to `ansible folder`.
+ - Update the `config file` to include `remote users and ports within the appropriate stanza`.
+ - Run the playbook, and navigate to the public IP of the ELK server on the specified port to the kibana app. [http://20.119.57.87/app/kibana](http://20.119.57.87/app/kibana) to check that the installation worked as expected.
 
 - _Which file is the playbook? Where do you copy it?_
-- ... - Copy the filebeat-playbook.yml file to /etc/ansible/files
+  - Copy the filebeat-playbook.yml file to /etc/ansible/files
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- ... - `/etc/ansible/hosts.cfg`
+  - `/etc/ansible/hosts.cfg`
 
 ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/Ansible_hosts_stanzas.png?raw=true "hosts_config")
 
-- ... - Update the `filebeat-config.yml` file to include the ELK server private IP in lines `1106` and `1806`.
+  - Update the `filebeat-config.yml` file to include the ELK server private IP in lines `1106` and `1806`.
 - _Which URL do you navigate to in order to check that the ELK server is running?
-- ... - Elk-public-IP:5601/app/kibana
+  - Elk-public-IP:5601/app/kibana
 
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
