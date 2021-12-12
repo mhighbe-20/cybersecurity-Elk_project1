@@ -150,13 +150,13 @@ _Configure the Jumpbox to run Docker with an Ansible control node._
 - Start by installing `docker.io` on your Jump box.
  - Run `sudo apt update` then `sudo apt install docker.io`
  - Verify that the Docker service is running.
- - Run sudo systemctl status docker. (_Note: If the Docker service is not running, start it with `sudo systemctl start docker`._)
- - Once Docker is installed, pull the container cyberxsecurity/ansible.
- - Run sudo docker pull cyberxsecurity/ansible.
+ - Run `sudo systemctl status docker`. (_Note: If the Docker service is not running, start it with `sudo systemctl start docker`._)
+ - Once Docker is installed, pull the container **cyberxsecurity/ansible**.
+ - Run sudo docker pull `cyberxsecurity/ansible`.
  - You can also switch to the root user so you don't have to keep typing sudo.
  - Run sudo su.
  - Launch the Ansible container and connect to it using the appropriate Docker commands.
- - Run docker run -ti cyberxsecurity/ansible:latest bash to start the container.
+ - Run `docker run -ti cyberxsecurity/ansible:latest bash` to start and connect to the container.
 
 _Assuming you have such a control node provisioned:_
 
@@ -166,7 +166,7 @@ SSH into the control node and follow the steps below:
  - Run the playbook, and navigate to the public IP of the ELK server on the specified port to the kibana app. [http://20.119.57.87/app/kibana](http://20.119.57.87/app/kibana) to check that the installation worked as expected.
 
 - _Which file is the playbook? Where do you copy it?_
-  - Copy the filebeat-playbook.yml file to /etc/ansible/files
+  - Copy the filebeat-playbook.yml file to /etc/ansible/files. Do the same for metricbeat.
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
   - `/etc/ansible/hosts.cfg`
