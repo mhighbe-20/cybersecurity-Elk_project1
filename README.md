@@ -63,23 +63,24 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _Whitelisted IP addresses_
-  - My `home public IP` to 23.99.178.156 restricted inbound rule on port 22.
+  - My `home public IP` to `Jump box provisioner` restricted inbound rule on port 22.
   - Machines within the network can only be accessed by ssh from the Ansible container on the jumpbox.
 
 - _Machines allowed to access the ELK VM and its IP address._
   Jump server via peering connection using SSH. 10.0.0.4 to 10.1.0.4.
 A summary of the access policies in place can be found in the table below.
 
-|  Name              	|  Publicly Accessible 	|  IP Address    	|  Description             	|
+|  Name              	|  Publicly Accessible 	|  IP Address    	|  Function               	|
 |--------------------	|----------------------	|----------------	|--------------------------	|
-|  Jump box          	|  Yes                 	|  23.99.178.156 	|  Home to Public SSH      	|
+|  Jump box          	|  Yes                 	|  23.99.178.156 	|  Container / provisioner 	|
 |  Ansible Container  |  NO                   |                 |  SSH to Web servers       |
 |  red-team-frontend 	|  Yes                 	|  40.83.47.118  	|  DVWA Load Balancer HTTP 	|
-|  Web-1             	|  No                  	|  40.83.47.118  	|  Backend Pool            	|
-|  Web-2             	|  No                  	|  40.83.47.118  	|  Backend Pool            	|
-|  Wweb-3            	|  No                  	|  40.83.47.118  	|  Backend Pool            	|
+|  Web-1             	|  No                  	|  40.83.47.118  	|  DVWA webserver container	|
+|  Web-2             	|  No                  	|  40.83.47.118  	|  DVWA webserver container	|
+|  Wweb-3            	|  No                  	|  40.83.47.118  	|  DVWA webserver container	|
 |  ELK Stack         	|  Yes                 	|  20.119.57.87  	|  Public HTTP             	|
 
+Note: wweb-3 spelling intentional.
 
 ### Elk Configuration
 
@@ -178,7 +179,7 @@ SSH into the control node and follow the steps below:
   - Elk-public-IP:5601/app/kibana
 
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+_**This section** provides the specific commands the user will need to run to download the playbook, update the files, etc._
 
 -	Go to /etc/ansible/files and use the curl command to add the config file:
 curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
