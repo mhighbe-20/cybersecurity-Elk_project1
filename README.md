@@ -167,12 +167,17 @@ SSH into the control node and follow the steps below:
  - Run the playbook, and navigate to the public IP of the ELK server on the specified port to the kibana app. [http://20.119.57.87/app/kibana](http://20.119.57.87/app/kibana) to check that the installation worked as expected.
 
 - _Which file is the playbook? Where do you copy it?_
-  - Copy the filebeat-playbook.yml file to /etc/ansible/files. Do the same for metricbeat.
+  - Copy the `filename-playbook.yml` file to `/etc/ansible/files`. For instance, other yaml files would include web servers, elk, filebeat, and metricbeat.
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-  - `/etc/ansible/hosts.cfg`
+  - Define the host in  `/etc/ansible/hosts.cfg`.
 
 ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/Ansible_hosts_stanzas.png?raw=true "hosts_config")
+
+- In the yaml file designate the desired `hosts` for the install.
+
+![alttext](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/Host-define-yml.png?raw=true "host-define-yml")
+
 
   - Update the `filebeat-config.yml` file to include the ELK server private IP in lines `1106` and `1806`.
 - _Which URL do you navigate to in order to check that the ELK server is running?
