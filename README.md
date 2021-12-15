@@ -170,11 +170,13 @@ SSH into the control node and follow the steps below:
   - Copy the `filename-playbook.yml` file to `/etc/ansible/files`. For instance, other yaml files would include web servers, elk, filebeat, and metricbeat.
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+  - Host-to-yaml corrolation: The host file defines the hosts, then the yaml file uses the host definition to specify where to direct the installation.
+  
   - Define the host in  `/etc/ansible/hosts.cfg`.
 
 ![alt text](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/Ansible_hosts_stanzas.png?raw=true "hosts_config")
 
-- In the yaml file designate the desired `hosts` for the install.
+  - In the yaml file designate the desired `hosts` for the install.
 
 ![alttext](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Images/Host-define-yml.png?raw=true "host-define-yml")
 
