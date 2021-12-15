@@ -17,6 +17,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
   [filebeat-playbook](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Ansible/filebeat-playbook.yml)
 
   [metricbeat](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Ansible/metricbeat-playbook.yml)
+  
+  [DVWA](https://github.com/mhighbe-20/cybersecurity-Elk_project1/blob/main/Ansible/Config%20Web%20VM%20with%20Docker.yml)
 
 This document contains the following details:
 - Description of the topology
